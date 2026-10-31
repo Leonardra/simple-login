@@ -1,17 +1,12 @@
-//
-//  simple_loginApp.swift
-//  simple-login
-//
-//  Created by Oluwatobi Jolayemi on 23/10/2026.
-//
-
 import SwiftUI
 
 @main
 struct simple_loginApp: App {
+    @State private var viewModel = LoginViewModel(authService: AppConfiguration.authService)
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView(viewModel: viewModel)
         }
     }
 }
